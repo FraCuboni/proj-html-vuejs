@@ -2,6 +2,7 @@
 import { store } from './store';
 import AppHeader from './components/AppHeader.vue';
 import AppFooter from './components/AppFooter.vue';
+import AppJumbo from './components/AppJumbo.vue';
 export default{
 
   name : 'App',
@@ -10,11 +11,13 @@ export default{
     
     AppHeader,
     AppFooter,
+    AppJumbo,
   },
 
   data(){
     return{
       store,
+      Lorem: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nostrum omnis eos ipsum explicabo qui laudantium minus ab culpa error! Ipsum non temporibus voluptates ea, perferendis voluptatum et quibusdam officia molestias!',
 
     }
   }
@@ -24,6 +27,7 @@ export default{
 
 <template>
   <AppHeader/>
+  <AppJumbo backgroundImage="/img/b.png" title="Services" :subtitle="Lorem" />
   <AppFooter/>
 </template>
 

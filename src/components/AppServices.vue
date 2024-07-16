@@ -1,7 +1,6 @@
 <script>
 
 export default{
-
   name : 'AppServices',
 
 }
@@ -9,7 +8,7 @@ export default{
 </script>
 
 <template>
-  <div>ciao</div>
+  <div></div>
 </template>
 
 <style lang="scss" scoped>
