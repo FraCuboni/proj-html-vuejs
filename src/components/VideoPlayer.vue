@@ -38,7 +38,9 @@ export default {
 
                 <div>videoname</div>
 
-                <div @click="handlePlayButton">X</div>
+                <div class="close" @click="handlePlayButton">
+                    <img src="/public/img/x_icon.svg" alt="">
+                </div>
 
             </div>
 
@@ -85,6 +87,11 @@ export default {
             display: flex;
             align-items: center;
             justify-content: space-between;
+
+            .close{
+                aspect-ratio: 1/1;
+                max-height: 100%;
+            }
         }
 
         .player{
