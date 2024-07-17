@@ -50,7 +50,7 @@ export default{
 
   .cont-jumbo {
     width: 50%;
-    padding-top: 150px;
+    padding-top: 120px;
     color: $white;
 
     h2,
@@ -59,7 +59,7 @@ export default{
     }
 
     h2 {
-      font-size: 50px;
+      font-size: 40px;
     }
 
     h5 {

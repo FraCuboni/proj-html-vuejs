@@ -5,6 +5,7 @@ export default{
   data() {
     return {
       openDropdown: null,
+      closeTimeout: null,
       menuItems: [
         {
           name: 'Home',
@@ -47,11 +48,17 @@ export default{
 
   methods: {
     openMenu(index) {
+      if (this.closeTimeout) {
+        clearTimeout(this.closeTimeout);
+        this.closeTimeout = null;
+      }
       this.openDropdown = index;
     },
 
     closeMenu() {
-      this.openDropdown = null;
+      this.closeTimeout = setTimeout(() => {
+        this.openDropdown = null;
+      }, 200);
     },
 
     isOpen(index) {
@@ -97,7 +104,7 @@ export default{
         </div>
         <nav>
           <ul>
-            <li v-for="(item, index) in menuItems" :key="index" @mouseover="openMenu(index)">
+            <li v-for="(item, index) in menuItems" :key="index" @mouseover="openMenu(index)" @mouseleave="closeMenu">
               <router-link v-if="item.routeName" :to="{ name: item.routeName }" class="route main-nav">
                 <span>{{ item.name }}</span>
                 <i v-if="item.subMenu.length" class="fa-solid fa-chevron-down"></i>
