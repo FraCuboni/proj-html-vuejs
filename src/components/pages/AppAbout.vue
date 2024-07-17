@@ -97,6 +97,66 @@ export default{
   </div>
 
   <!-- OUR STORY -->
+   <div class="container">
+   </div>
+
+  <!-- FRESH & HEALTHY FOOD -->
+   <div class="container fne">
+
+    <!-- img -->
+    <div class="box">
+      <img src="/public/img/AppAbout/food.png" alt="">
+    </div>
+
+    <!-- paragraph -->
+     <div class="box paragraph">
+      <h3>Fresh & Healthy Food</h3>
+
+      <!-- card -->
+      <div class="card">
+
+        <!-- img -->
+         <div class="img-box">
+          <img src="/public/img/AppAbout/pet_food.png" alt="">
+         </div>
+        <!-- txt -->
+         <div class="txt">
+          <h4>pet Food</h4>
+          <p>{{ store.lorem }}</p>
+         </div>
+      </div>
+
+      <!-- card -->
+      <div class="card">
+
+        <!-- img -->
+         <div class="img-box">
+          <img src="/public/img/AppAbout/pet_accessories.png" alt="">
+         </div>
+        <!-- txt -->
+         <div class="txt">
+          <h4>pet Food</h4>
+          <p>{{ store.lorem }}</p>
+         </div>
+      </div>
+
+      <!-- card -->
+      <div class="card">
+
+        <!-- img -->
+         <div class="img-box">
+          <img src="/public/img/AppAbout/pet_clothes.png" alt="">
+         </div>
+        <!-- txt -->
+         <div class="txt">
+          <h4>pet Food</h4>
+          <p>{{ store.lorem }}</p>
+         </div>
+      </div>
+
+     </div>
+   </div>
+
 </template>
 
 <style lang="scss" scoped>
@@ -124,6 +184,43 @@ export default{
       background-color: $brown ;
     }
   }
+}
+
+.container.fne{
+  .box{
+    width: 35%;
+
+  }
+
+  .paragraph{
+    width: 65%;
+
+    h3{
+      height: 25%;
+    }
+
+    .card{
+      display: flex;
+      align-items: center;
+      border: 1px solid $brown;
+      height: 25%;
+
+      .img-box{
+        height: 100%;
+        background-color: $brown;
+        aspect-ratio: 1/1;
+        border-radius: 50%;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        img{
+          width: 70%;
+        }
+      }
+    }
+  }
+
 }
 
 
