@@ -15,7 +15,7 @@
       },
     },
   };
-  </script>
+</script>
 
 <template>
     <swiper :slides-per-view="2" space-between="20" loop="true">
@@ -24,29 +24,56 @@
             <span>{{ card.vote }}</span>
             <h3>{{ card.title }}</h3>
             <p>{{card.text}}</p>
-            <div class="img-circle">
-                <img :src="card.img" alt="">
+            <div class="cont-img-text">
+                <div class="img-circle">
+                    <img :src="card.img" alt="">
+                </div>
+                <div class="text">
+                    <h5>{{ card.name }}</h5>
+                    <span>{{ card.job }}</span>
+                </div>
+            
             </div>
-            <h5>{{ card.name }}</h5>
+            
         </div>
       </swiper-slide>
     </swiper>
-  </template>
+</template>
   
   
-  <style lang="scss" scoped>
-  .card {
-    background-color: #eeeeee;
-    padding: 20px;
+<style lang="scss" scoped>
+@use '../styles/partials/variables' as *;
 
-    .img-circle{
-        width: 50px;
-        height: 50px;
+    .swiper{
+        width: 50%;
+    }    
 
-        img{
-            border-radius: 50%;
+    .card {
+        background-color: #eeeeee;
+        border-radius: 20px;
+        padding: 20px;
+        border-left: 2px solid $yellow;
+
+        p{
+            font-size: 12px;
+            margin-top: 0;
+        }
+
+        .cont-img-text{
+            display: flex;
+            align-items: center;
+
+            .img-circle{
+                margin-top: 20px;
+                margin-right: 20px;
+                width: 70px;
+                height: 70px;
+
+                img{
+                    border-radius: 50%;
+                }
+            }
         }
     }
-  }
   </style>
   

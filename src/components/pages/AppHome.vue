@@ -62,35 +62,40 @@ export default{
           title: "Grate Place",
           text: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer ",
           img: "../../public/img/t1.png",
-          name: "Tobias May"
+          name: "Tobias May",
+          job: "UI/UX Designer"
         },
         {
           vote: 3,
           title: "Grate Place",
           text: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer ",
           img: "../../public/img/t1.png",
-          name: "Tobias May"
+          name: "Tobias May",
+          job: "UI/UX Designer"
         },
         {
           vote: 3,
           title: "Grate Place",
           text: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer ",
           img: "../../public/img/t1.png",
-          name: "Tobias May"
+          name: "Tobias May",
+          job: "UI/UX Designer"
         },
         {
           vote: 3,
           title: "Grate Place",
           text: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer ",
           img: "../../public/img/t1.png",
-          name: "Tobias May"
+          name: "Tobias May",
+          job: "UI/UX Designer"
         },
         {
           vote: 3,
           title: "Grate Place",
           text: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer ",
           img: "../../public/img/t1.png",
-          name: "Tobias May"
+          name: "Tobias May",
+          job: "UI/UX Designer"
         },
       ]
     }
@@ -104,33 +109,42 @@ export default{
     <AppJumbo backgroundImage="/public/img/AppHome/b.png" title="Services" :subtitle="store.lorem"/>
     <!-- Section About Us -->
     <section class="about-us">
+      <!-- Container Principale -->
       <div class="container container-flex">
-        <div class="card-about-us">
-          <img src="../../../public/img/AppHome/about.png" alt="">
+        <!-- Colonna di sinistra -->
+        <div class="col-about-us">
+          <img src="../../../public/img/AppHome/about.png" alt="Dog">
         </div>
-        <div class="card-about-us">
-          <div class="img-container">
-            <img class="paw" src="../../../public/img/dog-icon.png" alt="">
-            <span>About Us</span>
+        <!-- Colonna di destra -->
+        <div class="col-about-us">
+          <div class="cont-about-us">
+            <img src="../../../public/img/dog-icon.png" alt="Paw">
+            <h4>About Us</h4>
           </div>
           <h2>Welcome DogMilo Pets</h2>
-          <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Molestiae et quas ea magnam voluptates aliquid quis perspiciatis ipsum fugiat laboriosam! Perspiciatis temporibus iusto accusantium modi vel repudiandae cum sequi velit?</p>
+          <p>{{store.lorem}}</p>
+          <p>{{store.lorem}}</p>
         </div>
       </div>
     </section>
 
     <!-- Section Service -->
     <section class="service">
+      <!-- Container Principale -->
       <div class="container">
+        <!-- Testo Section -->
         <div class="text">
-          <h6>Service</h6>
+          <h4>Service</h4>
           <h2>Dog Milo Pet Care Services For Your Best Friends.</h2>
         </div>
+        <!-- Card della section -->
         <div class="cards-container">
-          <div class="card" v-for=" (card, i) in this.cardList " :key="i">
-            <img :src="card.img" alt="">
-            <h3>{{card.title}}</h3>
-            <p>{{card.text}}</p>
+          <div class="card" v-for=" (info, i) in cardList " :key="i">
+            <div class="img-container">
+              <img :src="info.img" :alt="info.title">
+            </div>
+            <h3>{{info.title}}</h3>
+            <p>{{info.text}}</p>
             <div class="button">
               <img src="../../../public/img/right.png" alt="">
             </div>
@@ -142,34 +156,37 @@ export default{
 
     <!-- Section Choose Us -->
     <section class=choose-us>
-    <div class="container-flex">
-      <div>
-        <img src="../../../public/img/AppHome/why.png" alt="">
-      </div>
-      <div class="choose-us-card">
-        <div class="img-container">
-          <img class="paw" src="../../../public/img/dog-icon.png" alt="">
-          <span>About Us</span>
+      <!-- Container principale -->
+      <div class="container-flex">
+        <div>
+          <img src="../../../public/img/AppHome/why.png" alt="">
         </div>
-        <h2>Why Choose Us ?</h2>
-        <ul>
-          <li v-for=" (label, i) in this.chooseUsList" :key="i">
-            <img :src="label.img" alt="">
-            <div class="text">
-              <h5>{{ label.title }}</h5>
-              <p>{{ label.text }}</p>
-            </div>
-          </li>
-        </ul>
+        <!-- Colonna di destra -->
+        <div class="col-choose-us">
+          <div class="cont-choose-us">
+              <img src="../../../public/img/dog-icon.png" alt="Paw">
+              <h4>Choose us</h4>
+          </div>
+          <h2>Why Choose Us ?</h2>
+          <!-- Lista con V-for -->
+          <ul>
+            <li v-for=" (label, i) in this.chooseUsList" :key="i">
+              <img :src="label.img" alt="">
+              <div class="text">
+                <h5>{{ label.title }}</h5>
+                <p>{{ label.text }}</p>
+              </div>
+            </li>
+          </ul>
+        </div>
       </div>
-    </div>
     </section>
 
     <!-- Section Review & Rating -->
     <section class="review-rating">
       <div class="container container-flex">
-        <div class="text">
-          <h6>Review e Rating</h6>
+        <div class="col-review-rating">
+          <h4>Review e Rating</h4>
           <h2>Over 800 Customers with 5-star Reviews</h2>
           <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using</p>
         </div>
@@ -186,25 +203,41 @@ export default{
 @use '../../styles/partials/mixins' as *;
 @use '../../styles/partials/variables' as *;
 
-.container-flex{
-  display: flex;
 
-  .card-about-us{
-    width: 40%;
-      
-    .paw{
-      width: 50px;
-      height: 50px;
-      vertical-align: middle;
+// Scss Prima Section
+.about-us{
+  padding: 80px 0;
+
+  .container-flex{
+    display: flex;
+    justify-content: space-between;
+
+    .col-about-us{
+      width: 45%;
+
+      .cont-about-us{
+        display: flex;
+        align-items: center;
+        gap: 20px;
+        color: $light_grey;
+
+        img{
+          width: 40px;
+        }
+      }  
     }  
-  }    
+  }
 }
 
+
+// Scss Seconda Section
 .service{
   background-color: $light_grey;
+  padding: 80px 0;
 
   .text{
     text-align: center;
+    margin-bottom: 20px;
   }
 
   .cards-container{
@@ -219,16 +252,37 @@ export default{
       width: calc(100% / 5 - 20px);
       border-radius: 100px;
       text-align: center;
+      color: #fff;
+      padding: 20px;
 
       &:hover{
         background-color: #7f7045;
       }
 
+      p{
+        font-size: 18px;
+      }
+      .img-container{
+        width: 80px;
+      }
+
       .button{
+        cursor: pointer;
         width: 50px;
         height: 50px;
-        background-color: $yellow
+        background-color: $yellow;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        img{
+          width: 10px;
+          text-align: center;
+        }
       }
+
+
     }
   }
 }
@@ -237,25 +291,52 @@ export default{
 
   .container-flex{
     display: flex;
-    gap: 300px;
+    justify-content: space-between;
 
-    .choose-us-card{
-      width: 40%;
+    .col-choose-us{
+      width: 50%;
+      margin-top: 80px;
+      margin-right: 20px;
   
 
-      .paw{
-        width: 50px;
-        height: 50px;
-        vertical-align: middle;
-      }
-  
-      li{
+      .cont-choose-us{
         display: flex;
         align-items: center;
+        gap: 20px;
+        margin-bottom: 20px;
+        color: $light_grey;
 
         img{
-          width: 100px;
-          height: 100px;
+          width: 40px;
+        }
+      }  
+
+      ul{
+        list-style-type: none;
+        margin-top: 20px;
+
+        li{
+          display: flex;
+          align-items: center;
+          margin-top: 30px;
+
+          img{
+            width: 120px;
+            height: 120px;
+          }
+
+          .text{
+            margin-left: 20px;
+            line-height: 20px;
+
+            h5{
+              font-size: 20px;
+            }
+
+            p{
+              font-size: 18px;
+            }
+          }
         }
       }
     }
@@ -263,26 +344,19 @@ export default{
 }
 
 .review-rating{
+  padding: 80px 0;
+
+  h4{
+    margin-left: 40px;
+  }
 
   .container-flex{
     display: flex;
     justify-content: space-between;
 
-    .text{
+    .col-review-rating{
       width: 40%;
-    }
-
-    .cards-container{
-      width: 60%;
-      display: flex;
-
-      .card{
-        // DEBUG
-        width: 400px;
-        height: 400px;
-        background-color: yellow;
-      }
-    }
+    }    
   }
 }
 
