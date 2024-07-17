@@ -38,6 +38,6 @@ export default{
 @use './styles/general.scss' as *;
 @use './styles/partials/mixins' as *;
 @use './styles/partials/variables' as *;
-
+@import url('https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap');
 
 </style>
