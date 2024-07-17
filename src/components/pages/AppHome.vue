@@ -1,9 +1,16 @@
 <script>
+import { store } from '../../store';
 
 export default{
 
   name : 'AppHome',
 
+  data(){
+    return{
+      store,
+    }
+  },
+  
 }
 
 </script>

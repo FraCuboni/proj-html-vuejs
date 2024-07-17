@@ -1,30 +1,31 @@
 import { createRouter, createWebHistory } from 'vue-router';
-// import AppHome from './pages/AppHome.vue';
-// import PostList from './pages/PostList.vue';
+import AppHome from './components/pages/AppHome.vue';
+import AppAbout from './components/pages/AppAbout.vue';
+import AppServices from './components/pages/AppServices.vue';
 const router = createRouter({
     history: createWebHistory(),
     routes: [
-        // {
-        //     path: '/'
-        //     ,
-        //     name: 'home'
-        //     ,
-        //     component: AppHome
-        // },
-        // {
-        //     path: '/blog'
-        //     ,
-        //     name: 'posts'
-        //     ,
-        //     component: PostList
-        // },
-        // {
-        //     path: '/blog'
-        //     ,
-        //     name: 'posts'
-        //     ,
-        //     component: PostList
-        // },
+        {
+            path: '/'
+            ,
+            name: 'home'
+            ,
+            component: AppHome
+        },
+        {
+            path: '/about'
+            ,
+            name: 'about'
+            ,
+            component: AppAbout
+        },
+        {
+            path: '/services'
+            ,
+            name: 'services'
+            ,
+            component: AppServices
+        },
     ]
 });
 export { router };

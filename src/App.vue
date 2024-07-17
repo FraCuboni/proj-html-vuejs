@@ -10,14 +10,13 @@ export default{
   components : {
     
     AppHeader,
-    AppFooter,
     AppJumbo,
+    AppFooter,
   },
 
   data(){
     return{
       store,
-      Lorem: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nostrum omnis eos ipsum explicabo qui laudantium minus ab culpa error! Ipsum non temporibus voluptates ea, perferendis voluptatum et quibusdam officia molestias!',
 
     }
   }
@@ -27,7 +26,11 @@ export default{
 
 <template>
   <AppHeader/>
-  <AppJumbo backgroundImage="/img/b.png" title="Services" :subtitle="Lorem" />
+  <!-- <AppJumbo backgroundImage="/public/img/AppHome/b.png" title="Services" :subtitle="store.lorem" /> -->
+
+  <router-view/>
+  
+
   <AppFooter/>
 </template>
 

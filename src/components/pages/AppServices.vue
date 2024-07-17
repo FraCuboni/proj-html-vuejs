@@ -1,9 +1,16 @@
 <script>
+import { store } from '../../store';
 
 export default{
 
   name : 'AppServices',
-
+  
+  data(){
+    return{
+      store,
+    }
+  },
+  
 }
 
 </script>

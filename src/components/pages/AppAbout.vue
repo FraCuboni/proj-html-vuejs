@@ -1,8 +1,16 @@
 <script>
 
+import { store } from '../../store';
+
 export default{
 
   name : 'AppAbout',
+
+  data(){
+    return{
+      store,
+    }
+  },
 
 }
 
