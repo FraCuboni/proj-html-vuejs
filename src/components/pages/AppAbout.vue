@@ -1,10 +1,16 @@
 <script>
 
 import { store } from '../../store';
+import AppJumbo from '../../components/AppJumbo.vue';
 
 export default{
 
   name : 'AppAbout',
+
+  components : {
+    
+    AppJumbo,
+  },
 
   data(){
     return{
@@ -17,7 +23,7 @@ export default{
 </script>
 
 <template>
-  <div>ciao</div>
+  <AppJumbo backgroundImage="/public/img/AppAbout/banner4.png" title="About Us" :subtitle="store.lorem" />
 </template>
 
 <style lang="scss" scoped>
