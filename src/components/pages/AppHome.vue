@@ -1,11 +1,13 @@
 <script>
 import { store } from '../../store';
 import AppJumbo from '../AppJumbo.vue';
+import CardSlider from '../CardSlider.vue';
 
 export default{
   name : 'AppHome',
   components :{
-    AppJumbo
+    AppJumbo,
+    CardSlider
   },
   data(){
     return{
@@ -53,7 +55,43 @@ export default{
           title: "Monitor Your Pet",
           text: "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout."
         },
-
+      ],
+      cardRating: [
+        {
+          vote: 3,
+          title: "Grate Place",
+          text: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer ",
+          img: "../../public/img/t1.png",
+          name: "Tobias May"
+        },
+        {
+          vote: 3,
+          title: "Grate Place",
+          text: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer ",
+          img: "../../public/img/t1.png",
+          name: "Tobias May"
+        },
+        {
+          vote: 3,
+          title: "Grate Place",
+          text: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer ",
+          img: "../../public/img/t1.png",
+          name: "Tobias May"
+        },
+        {
+          vote: 3,
+          title: "Grate Place",
+          text: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer ",
+          img: "../../public/img/t1.png",
+          name: "Tobias May"
+        },
+        {
+          vote: 3,
+          title: "Grate Place",
+          text: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer ",
+          img: "../../public/img/t1.png",
+          name: "Tobias May"
+        },
       ]
     }
   },
@@ -135,17 +173,7 @@ export default{
           <h2>Over 800 Customers with 5-star Reviews</h2>
           <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using</p>
         </div>
-        <div class="cards-container">
-          <div class="card">
-
-          </div>
-          <div class="card">
-
-          </div>
-          <div class="card">
-
-          </div>
-        </div>
+        <CardSlider :cardRating="cardRating" />
       </div>
     </section>
 
