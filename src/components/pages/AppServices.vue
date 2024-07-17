@@ -106,20 +106,6 @@ export default{
 @use '../../styles/partials/mixins' as *;
 @use '../../styles/partials/variables' as *;
 
-h4 {
-  font-size: 25px;
-  color: $brown;
-}
-
-h2 {
-  font-size: 40px;
-}
-
-p {
-  font-size: 20px;
-  margin-top: 20px;
-}
-
 .upper,
 .lower {
   padding: 80px 0;
