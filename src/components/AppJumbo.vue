@@ -25,11 +25,13 @@ export default{
 
 <template>
     <div :style="jumboStyle" class="jumbo">
-      <div class="cont-jumbo">
-        <h2>{{ title }}</h2>
-        <h5>{{ subtitle }}</h5>
-        <button>{{ startButton }}</button>
-        <button>{{ blueButton }}</button>
+      <div class="container">
+        <div class="cont-jumbo">
+          <h2>{{ title }}</h2>
+          <h5>{{ subtitle }}</h5>
+          <button>{{ startButton }}</button>
+          <button>{{ blueButton }}</button>
+        </div>
       </div>
     </div>
 </template>
@@ -39,13 +41,11 @@ export default{
 @use '../styles/partials/variables' as *;
 
 .jumbo {
-  // DEBUG
   height: 450px;
   background-size: cover;
 
   .cont-jumbo {
-    width: 30%;
-    margin-left: 10%;
+    width: 50%;
     padding-top: 150px;
     color: $white;
 
@@ -55,12 +55,12 @@ export default{
     }
 
     h2 {
-      font-size: 60px;
+      font-size: 50px;
     }
 
     h5 {
       font-size: 20px;
-      font-weight: 200;
+      font-weight: 400;
     }
   }
 
