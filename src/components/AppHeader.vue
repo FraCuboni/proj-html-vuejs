@@ -5,6 +5,43 @@ export default{
   data() {
     return {
       openDropdown: null,
+      menuItems: [
+        {
+          name: 'Home',
+          routeName: 'home',
+          subMenu: [
+            { name: 'Home 1', routeName: 'home' },
+            { name: 'Home 2', routeName: 'home' },
+            { name: 'Home 3', routeName: 'home' },
+          ],
+        },
+        {
+          name: 'About',
+          routeName: 'about',
+          subMenu: [
+            { name: 'About 1', routeName: 'about' },
+            { name: 'About 2', routeName: 'about' },
+          ],
+        },
+        {
+          name: 'Services',
+          routeName: 'services',
+          subMenu: [
+            { name: 'Services 1', routeName: 'services' },
+            { name: 'Services 2', routeName: 'services' },
+          ],
+        },
+        {
+          name: 'Training',
+          routeName: null,
+          subMenu: [],
+        },
+        {
+          name: 'Blogs',
+          routeName: null,
+          subMenu: [],
+        },
+      ],
     }
   },
 
@@ -60,18 +97,22 @@ export default{
         </div>
         <nav>
           <ul>
-            <li @mouseover="openMenu(0)">
-              <router-link :to="{name: 'home'}" class="route main-nav">
-                <span>Home</span>
-                <i class="fa-solid fa-chevron-down"></i>
+            <li v-for="(item, index) in menuItems" :key="index" @mouseover="openMenu(index)">
+              <router-link v-if="item.routeName" :to="{ name: item.routeName }" class="route main-nav">
+                <span>{{ item.name }}</span>
+                <i v-if="item.subMenu.length" class="fa-solid fa-chevron-down"></i>
               </router-link>
-              <ul class="dropdown" v-if="isOpen(0)" @mouseover="openMenu(0)" @mouseleave="closeMenu">
-                <li><router-link :to="{name: 'home'}" class="route drop-menu">Home 1</router-link></li>
-                <li><router-link :to="{name: 'home'}" class="route drop-menu">Home 2</router-link></li>
-                <li><router-link :to="{name: 'home'}" class="route drop-menu">Home 2</router-link></li>
+              <a v-else href="#" class="route">
+                <span>{{ item.name }}</span>
+                <i v-if="item.subMenu.length" class="fa-solid fa-chevron-down"></i>
+              </a>
+              <ul class="dropdown" v-if="isOpen(index)" @mouseover="openMenu(index)" @mouseleave="closeMenu">
+                <li v-for="(subItem, subIndex) in item.subMenu" :key="subIndex">
+                  <router-link :to="{ name: subItem.routeName }" class="route drop-menu">{{ subItem.name }}</router-link>
+                </li>
               </ul>
             </li>
-            <li>
+            <!-- <li>
               <router-link :to="{name: 'about'}" class="route">
                 <span>About</span>
                 <i class="fa-solid fa-chevron-down"></i>
@@ -88,7 +129,7 @@ export default{
             </li>
             <li>
               <a href="#" class="route">Blogs</a>
-            </li>
+            </li> -->
           </ul>
         </nav>
       </div>
@@ -183,7 +224,6 @@ export default{
       }
 
       .dropdown {
-        // display: none;
         width: 220px;
         position: absolute;
         top: 180%;
@@ -193,7 +233,7 @@ export default{
         li {
           margin: 0;
           padding: 20px 0 20px 20px;
-          border-bottom: 1px solid $light_grey;
+          border-bottom: 1px solid rgb(180, 177, 177);
 
           .drop-menu:hover {
             color: $orange;
