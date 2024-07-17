@@ -128,8 +128,25 @@ export default{
     </section>
 
     <!-- Section Review & Rating -->
-    <section>
-      
+    <section class="review-rating">
+      <div class="container container-flex">
+        <div class="text">
+          <h6>Review e Rating</h6>
+          <h2>Over 800 Customers with 5-star Reviews</h2>
+          <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using</p>
+        </div>
+        <div class="cards-container">
+          <div class="card">
+
+          </div>
+          <div class="card">
+
+          </div>
+          <div class="card">
+
+          </div>
+        </div>
+      </div>
     </section>
 
 
@@ -212,6 +229,30 @@ export default{
           width: 100px;
           height: 100px;
         }
+      }
+    }
+  }
+}
+
+.review-rating{
+
+  .container-flex{
+    display: flex;
+    justify-content: space-between;
+
+    .text{
+      width: 40%;
+    }
+
+    .cards-container{
+      width: 60%;
+      display: flex;
+
+      .card{
+        // DEBUG
+        width: 400px;
+        height: 400px;
+        background-color: yellow;
       }
     }
   }
