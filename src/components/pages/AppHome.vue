@@ -36,6 +36,24 @@ export default{
           title: "Puppy Sitting",
           text: "The standard chunk of Lorem Ipsum used since."
         },
+      ],
+      chooseUsList: [
+        {
+          img: "../../../public/img/AppHome/w-3.png",
+          title: "Safty First",
+          text: "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout."
+        },
+        {
+          img: "../../../public/img/AppHome/w-2.png",
+          title: "Play Yards",
+          text: "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout."
+        },
+        {
+          img: "../../../public/img/AppHome/w-1.png",
+          title: "Monitor Your Pet",
+          text: "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout."
+        },
+
       ]
     }
   },
@@ -46,6 +64,7 @@ export default{
 
 <template>
     <AppJumbo backgroundImage="/public/img/AppHome/b.png" title="Services" :subtitle="store.lorem"/>
+    <!-- Section About Us -->
     <section class="about-us">
       <div class="container container-flex">
         <div class="card-about-us">
@@ -61,6 +80,8 @@ export default{
         </div>
       </div>
     </section>
+
+    <!-- Section Service -->
     <section class="service">
       <div class="container">
         <div class="text">
@@ -79,8 +100,40 @@ export default{
           </div>
         </div>
       </div>
+    </section>
+
+    <!-- Section Choose Us -->
+    <section class=choose-us>
+    <div class="container-flex">
+      <div>
+        <img src="../../../public/img/AppHome/why.png" alt="">
+      </div>
+      <div class="choose-us-card">
+        <div class="img-container">
+          <img class="paw" src="../../../public/img/dog-icon.png" alt="">
+          <span>About Us</span>
+        </div>
+        <h2>Why Choose Us ?</h2>
+        <ul>
+          <li v-for=" (label, i) in this.chooseUsList" :key="i">
+            <img :src="label.img" alt="">
+            <div class="text">
+              <h5>{{ label.title }}</h5>
+              <p>{{ label.text }}</p>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+    </section>
+
+    <!-- Section Review & Rating -->
+    <section>
       
     </section>
+
+
+
 
 </template>
 
@@ -133,7 +186,35 @@ export default{
       }
     }
   }
+}
+
+.choose-us{
+
+  .container-flex{
+    display: flex;
+    gap: 300px;
+
+    .choose-us-card{
+      width: 40%;
   
+
+      .paw{
+        width: 50px;
+        height: 50px;
+        vertical-align: middle;
+      }
+  
+      li{
+        display: flex;
+        align-items: center;
+
+        img{
+          width: 100px;
+          height: 100px;
+        }
+      }
+    }
+  }
 }
 
 
