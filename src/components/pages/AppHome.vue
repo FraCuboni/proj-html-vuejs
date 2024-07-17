@@ -106,7 +106,7 @@ export default{
 </script>
 
 <template>
-    <AppJumbo backgroundImage="/public/img/AppHome/b.png" title="Services" :subtitle="store.lorem"/>
+    <AppJumbo backgroundImage="/public/img/AppHome/b.png" title="Services" :subtitle="store.lorem" startButton="Get Started"  blueButton="Blue"/>
     <!-- Section About Us -->
     <section class="about-us">
       <!-- Container Principale -->
@@ -118,8 +118,11 @@ export default{
         <!-- Colonna di destra -->
         <div class="col-about-us">
           <div class="cont-about-us">
-            <img src="../../../public/img/dog-icon.png" alt="Paw">
+            <img class="paw" src="../../../public/img/dog-icon.png" alt="Paw">
             <h4>About Us</h4>
+            <div class="cont-dog-logo">
+              <img class="dog-logo" src="../../../public/img/AppHome/dog-logo.png" alt="">
+            </div> 
           </div>
           <h2>Welcome DogMilo Pets</h2>
           <p>{{store.lorem}}</p>
@@ -130,6 +133,9 @@ export default{
 
     <!-- Section Service -->
     <section class="service">
+      <div class="cont-dog-logo">
+        <img class="dog-logo" src="../../../public/img/AppHome/dog-left.png" alt="">
+      </div>
       <!-- Container Principale -->
       <div class="container">
         <!-- Testo Section -->
@@ -220,10 +226,23 @@ export default{
         align-items: center;
         gap: 20px;
         color: $light_grey;
+        position: relative;
+        margin-top: 30px;
 
-        img{
+        .paw{
           width: 40px;
         }
+
+        .cont-dog-logo{
+          position: absolute;
+          right: 50px;
+          bottom: -20px;
+
+          .dog-logo{
+            width: 130px;
+          }
+        }
+
       }  
     }  
   }
@@ -234,6 +253,12 @@ export default{
 .service{
   background-color: $light_grey;
   padding: 80px 0;
+  position: relative;
+
+  .cont-dog-logo{
+    position: absolute;
+    top: 20px;
+  }
 
   .text{
     text-align: center;
@@ -287,6 +312,7 @@ export default{
   }
 }
 
+// Scss Terza Section
 .choose-us{
 
   .container-flex{
@@ -343,6 +369,7 @@ export default{
   }
 }
 
+// Scss Quarta Section
 .review-rating{
   padding: 80px 0;
 
