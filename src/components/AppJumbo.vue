@@ -45,7 +45,7 @@ export default{
 @use '../styles/partials/variables' as *;
 
 .jumbo {
-  height: 450px;
+  height: 500px;
   background-size: cover;
 
   .cont-jumbo {
