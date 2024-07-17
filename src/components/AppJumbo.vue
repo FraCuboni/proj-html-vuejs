@@ -29,8 +29,12 @@ export default{
         <div class="cont-jumbo">
           <h2>{{ title }}</h2>
           <h5>{{ subtitle }}</h5>
-          <button>{{ startButton }}</button>
-          <button>{{ blueButton }}</button>
+          <div class="flex-container">
+            <div class="start-button">{{ startButton }}</div>
+            <div class="blue-button">
+              <img :src="blueButton" alt="icona">
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -62,6 +66,35 @@ export default{
       font-size: 20px;
       font-weight: 400;
     }
+
+    .flex-container{
+      display: flex;
+      gap: 20px;
+      
+      .start-button{
+        display: flex;
+        align-items: center;
+        background-color: $orange;
+        border-radius: 30px;
+        font-size: 20px;
+        padding: 10px;
+        cursor: pointer;
+      }
+
+      .blue-button{
+        display: flex;
+        align-items: center;
+        background-color: #00d7ec;
+        border-radius: 10px;
+        padding: 10px;
+        cursor: pointer;
+
+        img{
+          width: 40px;
+        }
+      }
+    }
+    
   }
 
 }
