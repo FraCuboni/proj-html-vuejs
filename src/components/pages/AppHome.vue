@@ -10,7 +10,33 @@ export default{
   data(){
     return{
       store,
-
+      cardList: [
+        {
+          img: "../../../public/img/AppHome/d-1.png",
+          title: "Coat Handler Pets",
+          text: "The standard chunk of Lorem Ipsum used since."
+        },
+        {
+          img: "../../../public/img/AppHome/d-2.png",
+          title: "Pet Security",
+          text: "The standard chunk of Lorem Ipsum used since."
+        },
+        {
+          img: "../../../public/img/AppHome/d-3.png",
+          title: "Night Care",
+          text: "The standard chunk of Lorem Ipsum used since."
+        },
+        {
+          img: "../../../public/img/AppHome/d-4.png",
+          title: "Dog Walking",
+          text: "The standard chunk of Lorem Ipsum used since."
+        },
+        {
+          img: "../../../public/img/AppHome/d-5.png",
+          title: "Puppy Sitting",
+          text: "The standard chunk of Lorem Ipsum used since."
+        },
+      ]
     }
   },
   
@@ -42,10 +68,10 @@ export default{
           <h2>Dog Milo Pet Care Services For Your Best Friends.</h2>
         </div>
         <div class="cards-container">
-          <div class="card">
-            <img src="../../../public/img/AppHome/d-1.png" alt="">
-            <h3>Coat Handler Pets</h3>
-            <p>The standard chunk of Lorem Ipsum used since.</p>
+          <div class="card" v-for=" (card, i) in this.cardList " :key="i">
+            <img :src="card.img" alt="">
+            <h3>{{card.title}}</h3>
+            <p>{{card.text}}</p>
             <div class="button">
               <img src="../../../public/img/right.png" alt="">
             </div>
@@ -85,13 +111,14 @@ export default{
 
   .cards-container{
     display: flex;
+    gap: 20px;
 
     .card{
       display: flex;
       flex-direction: column;
       align-items: center;
       background-color: $orange;
-      width: calc(100% / 6);
+      width: calc(100% / 5 - 20px);
       border-radius: 100px;
       text-align: center;
 
