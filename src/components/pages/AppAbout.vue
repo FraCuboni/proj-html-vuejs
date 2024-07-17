@@ -15,8 +15,44 @@ export default{
   data(){
     return{
       store,
+
+      ourGoals : [
+        {
+          imgPath : '/public/img/AppAbout/mision.png',
+          title : 'Our Goals',
+          paragraph : 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry’s standard dummy text ever since the 1500s, when an unknown printer took a galley of type',
+        },
+        {
+          imgPath : '/public/img/AppAbout/vision.png',
+          title : 'Our Vision',
+          paragraph : 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry’s standard dummy text ever since the 1500s, when an unknown printer took a galley of type',
+        },
+        {
+          imgPath : '/public/img/AppAbout/value.png',
+          title : 'Our Value',
+          paragraph : 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry’s standard dummy text ever since the 1500s, when an unknown printer took a galley of type',
+        },
+      ],
+
+      freshAndHealthyFood : [
+        {
+          imgPath:'/public/img/AppAbout/pet_food.png',
+          title : 'Pet Food',
+          paragraph : 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.',
+        },
+        {
+          imgPath:'/public/img/AppAbout/pet_accessories.png',
+          title : 'Pet Accessories',
+          paragraph : 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.',
+        },
+        {
+          imgPath:'/public/img/AppAbout/pet_clothes.png',
+          title : 'Pet Clothes',
+          paragraph : 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.',
+        },
+      ],
     }
-  },
+  }
 
 }
 
@@ -49,46 +85,18 @@ export default{
   <!-- OUR GOALS CONTAINER -->
   <div class="container">
 
-    <!-- our mission column -->
-    <div class="column">
+    <!--column -->
+    <div v-for="(goal, index) in ourGoals" :key="index" :class="['column', { 'reverse': (index + 1) % 2 === 0 }]">
 
       <!-- txt -->
       <div class="col-txt">
-        <h3>Our Goals</h3>
-        <p>{{ store.lorem }}</p>
+        <h3>{{ goal.title }}</h3>
+        <p>{{ goal.paragraph}}</p>
       </div>
 
       <!-- img -->
       <div class="col-img">
-        <img src="/public/img/AppAbout/mision.png" alt="">
-      </div>
-    </div>
-
-    <!-- our vision column -->
-    <div class="column">
-      <div class="col-img">
-        <img src="/public/img/AppAbout/vision.png" alt="">
-      </div>
-
-      <!-- txt -->
-      <div class="col-txt">
-        <h3>Our Vision</h3>
-        <p>{{ store.lorem }}</p>
-      </div>
-    </div>
-
-    <!-- our value column -->
-    <div class="column">
-
-      <!-- txt -->
-      <div class="col-txt">
-        <h3>Our Value</h3>
-        <p>{{ store.lorem }}</p>
-      </div>
-
-      <!-- img -->
-      <div class="col-img">
-        <img src="/public/img/AppAbout/value.png" alt="">
+        <img :src="goal.imgPath" alt="">
       </div>
     </div>
   </div>
@@ -119,44 +127,16 @@ export default{
       <h3 class="card">Fresh & Healthy Food</h3>
 
       <!-- card -->
-      <div class="card">
+      <div v-for="card in freshAndHealthyFood" class="card">
 
         <!-- img -->
          <div class="img-box">
-          <img src="/public/img/AppAbout/pet_food.png" alt="">
+          <img :src="card.imgPath" alt="">
          </div>
         <!-- txt -->
          <div class="txt">
-          <h4>pet Food</h4>
-          <p>{{ store.lorem }}</p>
-         </div>
-      </div>
-
-      <!-- card -->
-      <div class="card">
-
-        <!-- img -->
-         <div class="img-box">
-          <img src="/public/img/AppAbout/pet_accessories.png" alt="">
-         </div>
-        <!-- txt -->
-         <div class="txt">
-          <h4>pet Food</h4>
-          <p>{{ store.lorem }}</p>
-         </div>
-      </div>
-
-      <!-- card -->
-      <div class="card">
-
-        <!-- img -->
-         <div class="img-box">
-          <img src="/public/img/AppAbout/pet_clothes.png" alt="">
-         </div>
-        <!-- txt -->
-         <div class="txt">
-          <h4>pet Food</h4>
-          <p>{{ store.lorem }}</p>
+          <h4>{{card.title}}</h4>
+          <p>{{ card.paragraph }}</p>
          </div>
       </div>
 
@@ -186,7 +166,9 @@ export default{
       display: flex;
     }
   }
-  .column{
+  .column, .reverse{
+    display: flex;
+    flex-direction: column;
     width: calc(100% / 3);
     border: 1px dashed black;
     color: white;
@@ -200,6 +182,11 @@ export default{
       background-color: $brown ;
       padding: 15px;
     }
+  }
+
+  .reverse{
+
+    flex-direction: column-reverse;
   }
 }
 
