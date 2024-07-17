@@ -21,7 +21,13 @@
     <swiper :slides-per-view="2" space-between="20" loop="true">
       <swiper-slide v-for="(card, i) in cardRating" :key="i">
         <div class="card">
-            <span>{{ card.vote }}</span>
+            <span
+            v-for="star in 5"
+            :key="star"
+            class="star"
+            :class="{ selected: star <= card.vote }"
+            >&#9733;</span
+            >
             <h3>{{ card.title }}</h3>
             <p>{{card.text}}</p>
             <div class="cont-img-text">
@@ -53,6 +59,15 @@
         border-radius: 20px;
         padding: 20px;
         border-left: 2px solid $yellow;
+
+        .star {
+            font-size: 20px;
+            color: gray;
+        }
+
+        .star.selected {
+            color: gold;
+        }
 
         p{
             font-size: 12px;

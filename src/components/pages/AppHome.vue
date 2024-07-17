@@ -66,7 +66,7 @@ export default{
           job: "UI/UX Designer"
         },
         {
-          vote: 3,
+          vote: 4,
           title: "Grate Place",
           text: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer ",
           img: "../../public/img/t1.png",
@@ -74,7 +74,7 @@ export default{
           job: "UI/UX Designer"
         },
         {
-          vote: 3,
+          vote: 1,
           title: "Grate Place",
           text: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer ",
           img: "../../public/img/t1.png",
@@ -82,7 +82,7 @@ export default{
           job: "UI/UX Designer"
         },
         {
-          vote: 3,
+          vote: 2,
           title: "Grate Place",
           text: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer ",
           img: "../../public/img/t1.png",
@@ -90,7 +90,7 @@ export default{
           job: "UI/UX Designer"
         },
         {
-          vote: 3,
+          vote: 5,
           title: "Grate Place",
           text: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer ",
           img: "../../public/img/t1.png",
