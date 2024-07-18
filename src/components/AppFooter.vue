@@ -70,16 +70,15 @@ export default{
 
       <!-- list -->
       <ul v-for="info in contactInfo">
-        <li class="title">{{ info.section }}</li>
-        <li v-for="element in info.details" class="element">{{element}}</li>
+        <li class="title"><h4>{{ info.section }}</h4></li>
+        <li v-for="element in info.details" class="element"><p class="small">{{element}}</p></li>
       </ul>
 
     </div>
     <section>
-      <p class="copyright">Copyright © 2024 dogmilo-wordpress | Powered by dogmilo-wordpress</p>
+      <p class="copyright small">Copyright © 2024 dogmilo-wordpress | Powered by dogmilo-wordpress</p>
     </section>
 
-    <!-- sezione in absolute -->
     <div class="container orange">
 
       <div class="img-box">
@@ -88,7 +87,10 @@ export default{
 
       <div class="input-box">
         <h2>Subscribe to our newsletter</h2>
-        <input type="email">
+        <div class="input-bar">
+          <input type="email" placeholder="Email">
+          <button>@</button>
+        </div>
       </div>
     </div>
   </div>
@@ -98,6 +100,12 @@ export default{
 <style lang="scss" scoped>
 @use '../styles/partials/mixins' as *;
 @use '../styles/partials/variables' as *;
+
+p.small {
+    font-size: 15px;
+    margin-top: 15px;
+    color: lightgrey;
+}
 
 .background{
   background-color: black;
@@ -111,11 +119,16 @@ export default{
 
   .container{
     display: flex;
+    padding-bottom: 70px;
 
     ul{
       width: calc(100% / 5);
+      padding: 0 20px;
     .title{
-      color: $orange;
+      h4{
+        color: $orange;
+
+      }
     }
 
     }
@@ -124,17 +137,16 @@ export default{
 }
 
 section{
-  width: 70%;
+  width: 80%;
   margin: 0 auto;
   text-align: center;
-  border-top: 2px solid $grey;
+  border-top: 1px solid white;
   .copyright{
-    color: $grey;
     margin: 0 auto;
+    padding: 20px 0;
   }
 }
 
-// sezione in absolute
 .container.orange{
   background-color: $orange;
   min-height: 30px;
@@ -154,7 +166,6 @@ section{
 
     img{
       display: block;
-      margin-top: -80px;
     }
   }
   .input-box{
@@ -163,6 +174,30 @@ section{
     flex-direction: column;
     align-items: center;
     padding: 30px;
+    
+    &.input-box>*{
+      width: 100%;
+    }
+
+    .input-bar{
+      display: flex;
+
+      input{
+      width: 80%;
+      height: 3rem;
+      padding: 1rem;
+    }
+
+      button{
+        background-color: black;
+        height: 3rem;
+        padding: 1rem;
+        color: white;
+        width: 20%;
+        line-height: 1rem;
+        font-size: 2rem;
+      }
+    }
   }
 }
 
