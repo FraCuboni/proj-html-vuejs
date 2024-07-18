@@ -138,6 +138,7 @@ section{
 .container.orange{
   background-color: $orange;
   min-height: 30px;
+  max-height: 300px;
   position: absolute;
   transform: translate(-50%, -50%);
   top: 0;
@@ -148,12 +149,19 @@ section{
   align-items: center;
 
   .img-box{
-    width: calc(100% / 3);
+    width: calc((100% / 5) * 2 );
+    
+
+    img{
+      display: block;
+      margin-top: -80px;
+    }
   }
   .input-box{
-    width: calc((100% / 3) * 2 );
+    width: calc((100% / 5) * 3 );
     display: flex;
     flex-direction: column;
+    align-items: center;
     padding: 30px;
   }
 }
