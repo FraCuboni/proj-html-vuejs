@@ -129,54 +129,79 @@ export default{
   </div>
 
   <!-- OUR STORY -->
-   <div class="container os">
-    <h4>our story</h4>
-    <h2>DogMilo Pet Care Story For Your Best Friends.</h2>
-    <div class="box-video">
-      <!-- <video src="https://youtu.be/oNfIbv7iD9w"></video> -->
-       <div class="play-icon" @click="playButton">
+  <div class="bg-os">
+    <div class="bg"></div>
+    <div class="container os">
+      <h4>our story</h4>
+      <h2>DogMilo Pet Care Story For Your Best Friends.</h2>
+      <div class="box-video">
+        <!-- <video src="https://youtu.be/oNfIbv7iD9w"></video> -->
+        <div class="play-icon" @click="playButton">
         <img src="/public/img/play.png" alt="">
-       </div>
+        </div>
+      </div>
     </div>
-
-   </div>
+  </div>
 
   <!-- FRESH & HEALTHY FOOD -->
-   <div class="container fne">
+  <div class="bg-fne">
+    <div class="bg"></div>
+    <div class="container fne">
 
-    <!-- img -->
-    <div class="box">
-      <img src="/public/img/AppAbout/food.png" alt="">
-    </div>
-
-    <!-- paragraph -->
-     <div class="box paragraph">
-      <h2 class="card">Fresh & Healthy Food</h2>
-
-      <!-- card -->
-      <div v-for="card in freshAndHealthyFood" class="card">
-
-        <!-- img -->
-         <div class="img-box">
-          <img :src="card.imgPath" alt="">
-         </div>
-        <!-- txt -->
-         <div class="txt">
-          <h4>{{card.title}}</h4>
-          <p class="small">{{ card.paragraph }}</p>
-         </div>
+      <!-- img -->
+      <div class="box">
+        <img src="/public/img/AppAbout/food.png" alt="">
       </div>
 
-     </div>
-   </div>
+      <!-- paragraph -->
+      <div class="box paragraph">
+        <h2 class="card">Fresh & Healthy Food</h2>
 
+        <!-- card -->
+        <div v-for="card in freshAndHealthyFood" class="card">
+
+          <!-- img -->
+          <div class="img-box">
+            <img :src="card.imgPath" alt="">
+          </div>
+          <!-- txt -->
+          <div class="txt">
+            <h4>{{card.title}}</h4>
+            <p class="small">{{ card.paragraph }}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 </template>
 
 <style lang="scss" scoped>
 @use '../../styles/partials/mixins' as *;
 @use '../../styles/partials/variables' as *;
 
+.bg-os{
+  position: relative;
+  .bg{
+    position: absolute;
+    height: 300px;
+    background-color: $light_grey;
+    width: 100%;
+    z-index: -1;
+  }
+}
+.bg-fne{
+  position: relative;
+  .bg{
+    position: absolute;
+    height: 100%;
+    transform: translate(50%, -50%);
+    top: 40%;
+    width: 75%;
+    background-color: $light_grey;
+    z-index: -1;
 
+  }
+}
 p.small {
     font-size: 15px;
     margin-top: 15px;
