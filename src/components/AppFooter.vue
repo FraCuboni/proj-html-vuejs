@@ -132,7 +132,7 @@ p.small {
   min-height: 30px;
   color: white;
   padding: 50px 0;
-  margin-top: 200px;
+  margin-top: 250px;
   position: relative;
   padding-top: 200px;
 
