@@ -47,9 +47,12 @@ export default{
     },
     {
         section: "Contact Me",
-        address: "4500 Mercantile plaza, Suite 300, Fort Worth, TX, 76137, USA",
-        phone: "+0 123-456-7890",
-        email: "info@example.com"
+        details : [
+          "4500 Mercantile plaza, Suite 300, Fort Worth, TX, 76137, USA",
+          "+0 123-456-7890",
+          "info@example.com"
+
+        ]
     }
   ],
     }
@@ -64,12 +67,32 @@ export default{
 <template>
   <div class="background">
     <div class="container">
+
+      <!-- list -->
       <ul v-for="info in contactInfo">
         <li class="title">{{ info.section }}</li>
         <li v-for="element in info.details" class="element">{{element}}</li>
       </ul>
+
+    </div>
+    <section>
+      <p class="copyright">Copyright © 2024 dogmilo-wordpress | Powered by dogmilo-wordpress</p>
+    </section>
+
+    <!-- sezione in absolute -->
+    <div class="container orange">
+
+      <div class="img-box">
+        <img src="/public/img/footer_dogs.png" alt="">
+      </div>
+
+      <div class="input-box">
+        <h2>Subscribe to our newsletter</h2>
+        <input type="email">
+      </div>
     </div>
   </div>
+
 </template>
 
 <style lang="scss" scoped>
@@ -77,16 +100,66 @@ export default{
 @use '../styles/partials/variables' as *;
 
 .background{
-  background-color: $grey;
+  background-color: black;
   min-height: 30px;
   color: white;
+  padding: 50px 0;
+  margin-top: 200px;
+  position: relative;
 
 
   .container{
+    display: flex;
 
+    ul{
+      width: calc(100% / 5);
     .title{
       color: $orange;
     }
+
+    }
+
+  }
+}
+
+section{
+  width: 70%;
+  margin: 0 auto;
+  text-align: center;
+  border-top: 2px solid $grey;
+  .copyright{
+    color: $grey;
+    margin: 0 auto;
+  }
+}
+
+// sezione in absolute
+.container.orange{
+  background-color: $orange;
+  min-height: 30px;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  top: 0;
+  left: 50%;
+  border-radius: 25px;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+
+  .img-box{
+    position: absolute;
+    transform: translate(0, 50%);
+    bottom: 0;
+    left: 0;
+
+    width: calc(100% / 3);
+    padding: 30px;
+  }
+  .input-box{
+    width: calc((100% / 3) * 2 );
+    display: flex;
+    flex-direction: column;
+    padding: 30px;
   }
 }
 
