@@ -106,6 +106,7 @@ export default{
   padding: 50px 0;
   margin-top: 200px;
   position: relative;
+  padding-top: 200px;
 
 
   .container{
@@ -147,13 +148,7 @@ section{
   align-items: center;
 
   .img-box{
-    position: absolute;
-    transform: translate(0, 50%);
-    bottom: 0;
-    left: 0;
-
     width: calc(100% / 3);
-    padding: 30px;
   }
   .input-box{
     width: calc((100% / 3) * 2 );
