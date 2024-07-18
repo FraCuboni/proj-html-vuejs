@@ -213,7 +213,7 @@ export default{
 
     li {
       list-style-type: none;
-      margin-left: 35px;
+      margin-left: 25px;
       position: relative;
 
       .route {
@@ -223,8 +223,8 @@ export default{
         font-weight: 500;
 
         .fa-chevron-down {
-          margin-left: 10px;
-          font-size: 15px;
+          margin-left: 5px;
+          font-size: 10px;
         }
       }
 

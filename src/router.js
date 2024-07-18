@@ -7,24 +7,18 @@ const router = createRouter({
     history: createWebHistory(),
     routes: [
         {
-            path: '/'
-            ,
-            name: 'home'
-            ,
+            path: '/',
+            name: 'home',
             component: AppHome
         },
         {
-            path: '/about'
-            ,
-            name: 'about'
-            ,
+            path: '/about',
+            name: 'about',
             component: AppAbout
         },
         {
-            path: '/services'
-            ,
-            name: 'services'
-            ,
+            path: '/services',
+            name: 'services',
             component: AppServices
         },
         {
@@ -32,7 +26,7 @@ const router = createRouter({
             name: 'NotFound',
             components: NotFound
         },
-        
+
     ]
 });
 export { router };
