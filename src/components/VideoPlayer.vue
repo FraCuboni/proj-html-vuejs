@@ -5,6 +5,7 @@ export default {
   name: 'VideoPlayer',
 
   props: {
+    videoName: String,
     videoLink: String,
     playButton: Function,
   },
@@ -36,7 +37,7 @@ export default {
             
             <div class="topbar">
 
-                <div>videoname</div>
+                <div>{{videoName}}</div>
 
                 <div class="close" @click="handlePlayButton">
                     <img src="/public/img/x_icon.svg" alt="">

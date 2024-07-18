@@ -18,7 +18,7 @@ export default{
     return{
       store,
 
-      videoLink:'<iframe width="560" height="315" src="https://www.youtube.com/embed/YClj8irmwFA?si=GCn2g663zvXQjNGa" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>',
+      videoLink:'<iframe width="560" height="315" src="https://www.youtube.com/embed/av4sEcTS8QA?si=1a2NvI8jPZ8CSATx" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>',
 
       ourGoals : [
         {
@@ -57,6 +57,8 @@ export default{
       ],
 
       playVideo : false,
+
+      videoName : 'Our Story',
     }
   },
 
@@ -76,6 +78,7 @@ export default{
 
 <template>
   <VideoPlayer v-if="playVideo === true" 
+  :videoName = "videoName"
   :videoLink="videoLink"
   :play-button="playButton"
   />

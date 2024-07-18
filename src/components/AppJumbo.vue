@@ -11,8 +11,9 @@ export default{
 
   data(){
     return{
-      videoLink:'<iframe width="560" height="315" src="https://www.youtube.com/embed/YClj8irmwFA?si=GCn2g663zvXQjNGa" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>',
+      videoLink:'<iframe width="560" height="315" src="https://www.youtube.com/embed/4QA30qkRYy8?si=PUdTG1IJNLlV43xq" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>',
       playVideo : false,
+      videoName : 'DogMilo',
     }
   },
 
@@ -70,6 +71,7 @@ export default{
 
     <!-- video player -->
     <VideoPlayer v-if="playVideo === true" 
+  :videoName = "videoName"
     :videoLink="videoLink"
     :play-button="playButton"
     />
