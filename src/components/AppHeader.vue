@@ -99,9 +99,9 @@ export default{
     <!-- parte inferiore header -->
     <div class="lower">
       <div class="container">
-        <div class="logo">
+        <router-link :to="{name: 'home'}" class="logo">
           <img src="/public/img/logo.png" alt="logo">
-        </div>
+        </router-link>
         <nav>
           <ul>
             <li v-for="(item, index) in menuItems" :key="index" @mouseover="openMenu(index)" @mouseleave="closeMenu">
