@@ -90,16 +90,17 @@ export default{
     </section>
 
     <div class="container orange">
+      <div class="cont-box">
+        <div class="img-box">
+          <img src="/public/img/footer_dogs.png" alt="">
+        </div>
 
-      <div class="img-box">
-        <img src="/public/img/footer_dogs.png" alt="">
-      </div>
-
-      <div class="input-box">
-        <h2>Subscribe to our newsletter</h2>
-        <div class="input-bar">
-          <input type="email" placeholder="Email">
-          <button>@</button>
+        <div class="input-box">
+          <h2>Subscribe to our newsletter</h2>
+          <div class="input-bar">
+            <input type="email" placeholder="Email">
+            <button>@</button>
+          </div>
         </div>
       </div>
     </div>
@@ -169,24 +170,32 @@ section{
 
 .container.orange{
   background-color: $orange;
-  min-height: 30px;
-  max-height: 300px;
+  height: 280px;
   position: absolute;
   transform: translate(-50%, -50%);
   top: 0;
   left: 50%;
   border-radius: 25px;
-  display: flex;
-  justify-content: end;
-  align-items: center;
 
-  .img-box{
-    width: 40%;
-    
+  .cont-box {
+    width: 100%;
+    height: 280px;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    position: relative;
 
-    img{
-      display: block;
+    .img-box{
+      width: 40%;
+      position: absolute;
+      bottom: 0;
+      left: 5px;
+
+      img {
+        display: block;
+      }
     }
+
   }
   .input-box{
     width: 60%;
