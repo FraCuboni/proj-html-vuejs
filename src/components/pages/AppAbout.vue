@@ -233,7 +233,11 @@ p.small {
     color: white;
 
     .col-img{
-      height: 55%;
+      height: 50%;
+
+      img{
+        height: 100%;
+      }
     }
 
     .col-txt{
@@ -321,6 +325,17 @@ p.small {
 
 }
 
+// breakpoint fix txt
+@media screen and (max-width: 1235px) {
+  .col-txt{
+    p.small{
+
+      height: 100px;
+      overflow: auto;
+    }
+  }
+}
+
 // tablet
 @media screen and (max-width: 1031px){
 
@@ -374,12 +389,12 @@ p.small {
   .container.fne{
     text-align: center;
   .box{
-    width: 80%;
-    order: 2;
+    display: none;
   }
   .paragraph{
     width: 100%;
     order: 1;
+    display: none;
 
     h3{
       height: calc(100% / 4 - 5px);
