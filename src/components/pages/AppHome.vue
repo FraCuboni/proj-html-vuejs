@@ -106,7 +106,7 @@ export default{
 </script>
 
 <template>
-    <AppJumbo backgroundImage="/public/img/AppHome/b.png" title="Welcome to DogMilo Pets" :subtitle="store.lorem" startButton="Get Started"  blueButton="../../../public/img/play.png"/>
+    <AppJumbo backgroundImage="/public/img/AppHome/b.png" title="Welcome to DogMilo Pets" :subtitle="store.lorem" startButton="Get Started"  blueButtonSm="../../../public/img/play.png"/>
     <!-- Section About Us -->
     <section class="about-us">
       <!-- Container Principale -->

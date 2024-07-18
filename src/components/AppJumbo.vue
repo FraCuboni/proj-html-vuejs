@@ -7,7 +7,8 @@ export default{
     title: 'String',
     subtitle: 'String',
     startButton: 'String',
-    blueButton: 'String',
+    blueButtonSm: 'String',
+    blueButtonMd: 'String',
 
   },
 
@@ -30,9 +31,12 @@ export default{
           <h2>{{ title }}</h2>
           <h5>{{ subtitle }}</h5>
           <div class="flex-container">
-            <div class="start-button">{{ startButton }}</div>
-            <div class="blue-button">
-              <img :src="blueButton" alt="icona">
+            <div v-if="startButton" class="start-button">{{ startButton }}</div>
+            <div v-if="blueButtonSm" class="blue-button-sm">
+              <img :src="blueButtonSm" alt="icona">
+            </div>
+            <div v-if="blueButtonMd" class="blue-button-md">
+              <img :src="blueButtonMd" alt="icona">
             </div>
           </div>
         </div>
@@ -45,7 +49,7 @@ export default{
 @use '../styles/partials/variables' as *;
 
 .jumbo {
-  height: 500px;
+  height: 550px;
   background-size: cover;
 
   .cont-jumbo {
@@ -53,18 +57,16 @@ export default{
     padding-top: 120px;
     color: $white;
 
-    h2,
-    h5 {
-      margin-bottom: 20px;
-    }
-
     h2 {
-      font-size: 40px;
+      width: 60%;
+      font-size: 50px;
+      margin-bottom: 20px;
     }
 
     h5 {
       font-size: 20px;
       font-weight: 400;
+      margin-bottom: 40px;
     }
 
     .flex-container{
@@ -76,22 +78,46 @@ export default{
         align-items: center;
         background-color: $orange;
         border-radius: 30px;
-        font-size: 20px;
-        padding: 10px;
-        cursor: pointer;
+        font-size: 25px;
+        padding: 2px 30px;
       }
 
-      .blue-button{
+      .start-button:hover {
+        cursor: pointer;
+        text-decoration: underline;
+        background-color: $white;
+        color: black;
+        transition: background-color linear 0.5s;
+      }
+
+      .blue-button-sm,
+      .blue-button-md {
         display: flex;
         align-items: center;
         background-color: #00d7ec;
-        border-radius: 10px;
-        padding: 10px;
-        cursor: pointer;
+        border-radius: 5px;
+      }
+
+      .blue-button-sm {
+        padding: 10px 20px;
 
         img{
-          width: 40px;
+          width: 30px;
         }
+      }
+
+      .blue-button-md {
+        padding: 5px 10px;
+
+        img {
+          width: 60px;
+        }
+      }
+
+      .blue-button-sm:hover {
+        cursor: pointer;
+        background-color: $orange;
+        transition: background-color linear 0.5s;
       }
     }
     

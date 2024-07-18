@@ -80,7 +80,7 @@ export default{
   :play-button="playButton"
   />
 
-  <AppJumbo backgroundImage="/public/img/AppAbout/banner4.png" title="About Us" :subtitle="store.lorem"/>
+  <AppJumbo backgroundImage="/public/img/AppAbout/banner4.png" title="About Us" :subtitle="store.lorem" blueButtonMd="/public/img/up-a.png" />
 
   <!-- WELCOME DOGMILO PETS CONTAINER-->
   <div class="container">

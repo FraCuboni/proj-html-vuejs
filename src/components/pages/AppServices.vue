@@ -52,7 +52,7 @@ export default{
 </script>
 
 <template>
-  <AppJumbo backgroundImage="/public/img/AppServices/banner3.png" title="Services" :subtitle="store.lorem" />
+  <AppJumbo backgroundImage="/public/img/AppServices/banner3.png" title="Services" :subtitle="store.lorem" blueButtonMd="/public/img/up-a.png" />
   <!-- prima parte -->
   <section>
     <div class="container upper">
