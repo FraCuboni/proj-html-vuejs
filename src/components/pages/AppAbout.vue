@@ -374,11 +374,12 @@ p.small {
   .container.fne{
     text-align: center;
   .box{
-    display: none;
+    width: 100%;
+    order: 2;
   }
   .paragraph{
     width: 100%;
-    display: block;
+    order: 1;
 
     h3{
       height: calc(100% / 4 - 5px);
