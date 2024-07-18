@@ -144,6 +144,7 @@ export default{
   </div>
 
   <!-- FRESH & HEALTHY FOOD -->
+  
   <div class="bg-fne">
     <div class="bg"></div>
     <div class="container fne">
@@ -191,6 +192,7 @@ export default{
 }
 .bg-fne{
   position: relative;
+  overflow-x: hidden;
   .bg{
     position: absolute;
     height: 100%;
