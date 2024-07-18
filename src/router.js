@@ -2,6 +2,7 @@ import { createRouter, createWebHistory } from 'vue-router';
 import AppHome from './components/pages/AppHome.vue';
 import AppAbout from './components/pages/AppAbout.vue';
 import AppServices from './components/pages/AppServices.vue';
+import NotFound from './components/pages/NotFound.vue';
 const router = createRouter({
     history: createWebHistory(),
     routes: [
@@ -26,6 +27,11 @@ const router = createRouter({
             ,
             component: AppServices
         },
+        {
+            path: '/:pathMatch(.*)*',
+            name: 'NotFound',
+            components: NotFound
+        }
     ]
 });
 export { router };
