@@ -214,4 +214,50 @@ export default{
   }
 }
 
+// tablet version
+@media (max-width: 1030px) {
+  .upper { 
+    align-items: flex-end;
+
+    .cont-img {
+      width: 60%;
+    }
+  }
+
+  .bg {
+    .lower {
+      .card-container {
+        .card {
+          width: calc((100% / 2) - 20px);
+        }
+      }
+    }
+  }
+}
+
+// mobile version
+@media (max-width: 770px) {
+  .upper {
+    flex-direction: column-reverse;
+    width: 100%;
+    gap: 30px;
+    
+    .cont-img,
+    .content {
+      width: 80%;
+      margin: 0 auto;
+    }
+  }
+
+  .bg {
+    .lower {
+      .card-container {
+        .card {
+          width: 100%;
+        }
+      }
+    }
+  }
+}
+
 </style>
