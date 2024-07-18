@@ -34,7 +34,7 @@ export default{
         },
         {
           name: 'Training',
-          routeName: null,
+          routeName: 'NotFound',
           subMenu: [],
         },
         {

@@ -41,12 +41,12 @@ export default{
 </script>
 
 <template>
-  <NotFound/>
   <PageLoader :loading="isLoading" />
   <AppHeader/>
-  <!-- <AppJumbo backgroundImage="/public/img/AppHome/b.png" title="Services" :subtitle="store.lorem" /> -->
 
+  
   <router-view/>
+  <NotFound/>
   
 
   <AppFooter/>
