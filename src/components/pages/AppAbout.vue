@@ -144,6 +144,7 @@ export default{
   </div>
 
   <!-- FRESH & HEALTHY FOOD -->
+  
   <div class="bg-fne">
     <div class="bg"></div>
     <div class="container fne">
