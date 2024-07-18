@@ -34,12 +34,12 @@ export default{
         },
         {
           name: 'Training',
-          routeName: 'NotFound',
+          routeName: 'training',
           subMenu: [],
         },
         {
           name: 'Blogs',
-          routeName: null,
+          routeName: 'blogs',
           subMenu: [],
         },
       ],
