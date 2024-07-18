@@ -46,7 +46,6 @@ export default{
 
   
   <router-view/>
-  <NotFound/>
   
 
   <AppFooter/>
