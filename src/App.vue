@@ -3,28 +3,43 @@ import { store } from './store';
 import AppHeader from './components/AppHeader.vue';
 import AppFooter from './components/AppFooter.vue';
 import AppJumbo from './components/AppJumbo.vue';
+import FullPageLoader from './components/FullPageLoader.vue';
 export default{
 
   name : 'App',
 
   components : {
-    
     AppHeader,
     AppJumbo,
     AppFooter,
+    FullPageLoader,
   },
 
   data(){
     return{
       store,
-
+      isLoading: false,
     }
-  }
+  },
+  methods: {
+    showLoader() {
+      this.isLoading = true;
+      setTimeout(() => {
+        this.isLoading = false;
+      }, 1000);
+    }
+  },
+  watch: {
+    $route(to, from) {
+      this.showLoader();
+    }
+  },
 }
 
 </script>
 
 <template>
+  <FullPageLoader :loading="isLoading" />
   <AppHeader/>
   <!-- <AppJumbo backgroundImage="/public/img/AppHome/b.png" title="Services" :subtitle="store.lorem" /> -->
 
