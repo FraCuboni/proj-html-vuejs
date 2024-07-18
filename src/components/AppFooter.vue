@@ -159,10 +159,11 @@ section{
   width: 80%;
   margin: 0 auto;
   text-align: center;
-  border-top: 1px solid white;
+  border-top: 1px solid $light_grey;
   .copyright{
     margin: 0 auto;
     padding: 20px 0;
+    color: $light_grey;
   }
 }
 
@@ -180,7 +181,7 @@ section{
   align-items: center;
 
   .img-box{
-    width: calc((100% / 5) * 2 );
+    width: 40%;
     
 
     img{
@@ -188,7 +189,7 @@ section{
     }
   }
   .input-box{
-    width: calc((100% / 5) * 3 );
+    width: 60%;
     display: flex;
     flex-direction: column;
     align-items: center;

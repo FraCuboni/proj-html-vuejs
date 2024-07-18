@@ -90,7 +90,7 @@ export default {
 
             .close{
                 aspect-ratio: 1/1;
-                max-height: 100%;
+                height: 100%;
             }
         }
 

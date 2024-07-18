@@ -273,7 +273,7 @@ p.small {
 
       .img-box{
         height: 80px;
-        background-color: $brown;
+        background-color: #A69A79;
         aspect-ratio: 1/1;
         border-radius: 50%;
 
