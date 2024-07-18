@@ -6,12 +6,12 @@ export default {
 
   props: {
     videoLink: String,
-    playButton: Function, // Definisci la prop playButton di tipo Function
+    playButton: Function,
   },
 
   data() {
     return {
-      store, // Non è chiaro cosa stai facendo con lo store qui
+      store,
     };
   },
 

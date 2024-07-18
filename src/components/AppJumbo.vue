@@ -1,7 +1,21 @@
 <script>
 
+import VideoPlayer from './VideoPlayer.vue';
+
 export default{
   name : 'AppJumbo',
+
+  components : {
+    VideoPlayer,
+  },
+
+  data(){
+    return{
+      videoLink:'<iframe width="560" height="315" src="https://www.youtube.com/embed/YClj8irmwFA?si=GCn2g663zvXQjNGa" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>',
+      playVideo : false,
+    }
+  },
+
   props: {
     backgroundImage: 'String',
     title: 'String',
@@ -10,6 +24,17 @@ export default{
     blueButtonSm: 'String',
     blueButtonMd: 'String',
 
+
+  },
+
+  methods : {
+    playButton(){
+      console.log(this.playVideo);
+      
+      this.playVideo = !this.playVideo;
+
+      console.log(this.playVideo); 
+    },
   },
 
   computed: {
@@ -32,7 +57,7 @@ export default{
           <h5>{{ subtitle }}</h5>
           <div class="flex-container">
             <div v-if="startButton" class="start-button">{{ startButton }}</div>
-            <div v-if="blueButtonSm" class="blue-button-sm">
+            <div v-if="blueButtonSm" class="blue-button-sm" @click="playButton">
               <img :src="blueButtonSm" alt="icona">
             </div>
             <div v-if="blueButtonMd" class="blue-button-md">
@@ -42,6 +67,12 @@ export default{
         </div>
       </div>
     </div>
+
+    <!-- video player -->
+    <VideoPlayer v-if="playVideo === true" 
+    :videoLink="videoLink"
+    :play-button="playButton"
+    />
 </template>
 
 <style lang="scss" scoped>
