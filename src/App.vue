@@ -4,6 +4,7 @@ import AppHeader from './components/AppHeader.vue';
 import AppFooter from './components/AppFooter.vue';
 import AppJumbo from './components/AppJumbo.vue';
 import PageLoader from './components/PageLoader.vue';
+import NotFound from './components/pages/NotFound.vue';
 export default{
 
   name : 'App',
@@ -13,6 +14,7 @@ export default{
     AppJumbo,
     AppFooter,
     PageLoader,
+    NotFound,
   },
 
   data(){
@@ -39,6 +41,7 @@ export default{
 </script>
 
 <template>
+  <NotFound/>
   <PageLoader :loading="isLoading" />
   <AppHeader/>
   <!-- <AppJumbo backgroundImage="/public/img/AppHome/b.png" title="Services" :subtitle="store.lorem" /> -->
