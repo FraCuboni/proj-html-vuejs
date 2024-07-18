@@ -329,7 +329,6 @@ p.small {
 @media screen and (max-width: 1235px) {
   .col-txt{
     p.small{
-
       height: 100px;
       overflow: auto;
     }
@@ -362,6 +361,13 @@ p.small {
     .column, .reverse{
       width: calc(100% / 2);
       padding: 10px;
+
+      .col-txt{
+        p.small{
+          height: auto;
+          overflow: hidden;
+        }
+      }
     }
 
     .reverse{
