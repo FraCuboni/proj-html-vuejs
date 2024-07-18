@@ -267,11 +267,14 @@ p.small {
 
     .play-icon{
       width: 50px;
-      
       position: absolute;
       transform: translate(-50%, -50%);
       left: 50%;
       top: 50%;
+    }
+
+    .play-icon:hover {
+      cursor: pointer;
     }
   }
 }

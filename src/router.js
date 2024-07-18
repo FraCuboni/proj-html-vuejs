@@ -27,7 +27,7 @@ const router = createRouter({
             component: NotFound
         },
         {
-            path: '/trainig',
+            path: '/training',
             name: 'training',
             component: NotFound
         },
