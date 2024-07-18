@@ -119,24 +119,9 @@ export default{
                 </li>
               </ul>
             </li>
-            <!-- <li>
-              <router-link :to="{name: 'about'}" class="route">
-                <span>About</span>
-                <i class="fa-solid fa-chevron-down"></i>
-              </router-link>
-            </li>
             <li>
-              <router-link :to="{name: 'services'}" class="route">
-                <span>Services</span>
-                <i class="fa-solid fa-chevron-down"></i>
-              </router-link>
+              <div class="start-button">Get In Touch</div>
             </li>
-            <li>
-              <a href="#" class="route">Training</a>
-            </li>
-            <li>
-              <a href="#" class="route">Blogs</a>
-            </li> -->
           </ul>
         </nav>
       </div>
@@ -209,19 +194,32 @@ export default{
     justify-content: space-between;
     align-items: center;
 
+    .start-button {
+      background-color: $orange;
+      color: $white;
+      border-radius: 30px;
+      font-size: 22px;
+      font-weight: 500;
+      padding: 12px 30px;
+    }
+
+    .start-button:hover {
+      cursor: pointer;
+    }
+
     li:hover .main-nav {
       color: $orange;
     }
 
     li {
       list-style-type: none;
-      margin-left: 40px;
+      margin-left: 35px;
       position: relative;
 
       .route {
         text-decoration: none;
         color: gray;
-        font-size: 25px;
+        font-size: 22px;
         font-weight: 500;
 
         .fa-chevron-down {
