@@ -3,7 +3,7 @@ import { store } from './store';
 import AppHeader from './components/AppHeader.vue';
 import AppFooter from './components/AppFooter.vue';
 import AppJumbo from './components/AppJumbo.vue';
-import FullPageLoader from './components/FullPageLoader.vue';
+import PageLoader from './components/PageLoader.vue';
 export default{
 
   name : 'App',
@@ -12,7 +12,7 @@ export default{
     AppHeader,
     AppJumbo,
     AppFooter,
-    FullPageLoader,
+    PageLoader,
   },
 
   data(){
@@ -39,7 +39,7 @@ export default{
 </script>
 
 <template>
-  <FullPageLoader :loading="isLoading" />
+  <PageLoader :loading="isLoading" />
   <AppHeader/>
   <!-- <AppJumbo backgroundImage="/public/img/AppHome/b.png" title="Services" :subtitle="store.lorem" /> -->
 
