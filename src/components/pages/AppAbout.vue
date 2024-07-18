@@ -191,6 +191,7 @@ export default{
 }
 .bg-fne{
   position: relative;
+  overflow-x: hidden;
   .bg{
     position: absolute;
     height: 100%;
