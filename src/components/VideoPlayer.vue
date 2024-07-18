@@ -37,7 +37,7 @@ export default {
             
             <div class="topbar">
 
-                <div>{{videoName}}</div>
+                <h3>{{videoName}}</h3>
 
                 <div class="close" @click="handlePlayButton">
                     <img src="/public/img/x_icon.svg" alt="">
@@ -92,6 +92,7 @@ export default {
             .close{
                 aspect-ratio: 1/1;
                 height: 100%;
+                cursor: pointer;
             }
         }
 
