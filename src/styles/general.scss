@@ -35,3 +35,19 @@ p {
     font-size: 20px;
     margin-top: 20px;
 }
+
+// Media Query
+@media screen and (min-width:770px ) and (max-width: 1030px) {
+    h2{
+        font-size: 25px;
+    }
+
+    h4{
+        font-size: 20px;
+    }
+
+    p{
+        font-size: 20px;
+        margin-top: 10px;
+    }
+}

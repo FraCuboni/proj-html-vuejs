@@ -164,7 +164,7 @@ export default{
     <section class=choose-us>
       <!-- Container principale -->
       <div class="container-flex">
-        <div>
+        <div class="img-choose-us">
           <img src="../../../public/img/AppHome/why.png" alt="">
         </div>
         <!-- Colonna di destra -->
@@ -386,6 +386,221 @@ export default{
     }    
   }
 }
+ 
+// Media Query Tablet 
+@media screen and (max-width: 1030px) {
+  .about-us {
+    padding: 40px 0;
+
+    .container-flex {
+      flex-direction: column;
+      align-items: center;
+
+      .col-about-us {
+        width: 90%;
+        margin-bottom: 20px;
+
+        .cont-about-us {
+          flex-direction: column;
+          align-items: flex-start;
+          gap: 10px;
+
+          .paw {
+            width: 30px;
+          }
+
+          .cont-dog-logo {
+            right: 20px;
+            bottom: -10px;
+
+            .dog-logo {
+              width: 100px;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .service {
+    padding: 40px 0;
+
+    .text {
+      margin-bottom: 10px;
+    }
+
+    .cards-container{
+      flex-wrap: wrap;
+
+      .card {
+        width: calc(100% / 3 - 20px);
+        margin-bottom: 20px;
+      }
+    }
+
+    
+  }
+
+  .choose-us {
+    display: flex;
+
+    .container-flex{
+      .img-choose-us{
+      width: 50%;
+    }
+
+    
+
+      .col-choose-us {
+        width: 50%;
+        margin-top: 0;
+        margin-right: 0;
+        padding: 10px;
+
+        ul {
+          margin-top: 10px;
+
+          li {
+            
+
+            img {
+              width: 50px;
+              height: 50px;
+            }
+
+            .text {
+              margin-left: 0;
+              line-height: 1.5;
+
+              h5 {
+                font-size: 13px;
+              }
+
+              p {
+                font-size: 12px;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    
+  }
+
+  .review-rating {
+    padding: 40px 0;
+
+    h4{
+      margin-left: 0;
+    }
+
+    .container-flex {
+
+      .col-review-rating {
+        width: 40%;
+        margin-bottom: 20px;
+        margin-right: 20px;
+        text-align: center;
+      }
+    }
+  }
+}
+
+// Media Query Mobile
+@media screen and (max-width: 770px) {
+
+  .service {
+    padding: 40px 0;
+
+    .text {
+      margin-bottom: 10px;
+    }
+
+    .cards-container {
+      display: flex;
+      flex-direction: column;
+
+      .card {
+        width: 90%;
+        margin-bottom: 20px;
+      }
+    }
+  }
+
+  .choose-us {
+    
+
+    .container-flex {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      .img-choose-us {
+        width: 90%;
+        margin-bottom: 20px;
+      }
+
+      .col-choose-us {
+        width: 90%;
+        margin-top: 0;
+        margin-right: 0;
+        padding: 10px;
+
+        ul {
+          margin-top: 10px;
+
+          li {
+            img {
+              width: 70px;
+              height: 70px;
+              margin-right: 10px;
+            }
+
+            .text {
+              margin-left: 0;
+              line-height: 1.5;
+
+              h5 {
+                font-size: 15px;
+              }
+
+              p {
+                font-size: 14px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .review-rating {
+    padding: 40px 0;
+
+    h4 {
+      margin-left: 0;
+      text-align: center;
+    }
+
+    .container-flex {
+      flex-direction: column;
+      align-items: center;
+
+      .col-review-rating {
+        width: 90%;
+        margin-bottom: 20px;
+        margin-right: 0;
+        text-align: center;
+      }
+    }
+  }
+
+  .swiper {
+    width: 100%;
+  }
+}
+
 
 
 </style>

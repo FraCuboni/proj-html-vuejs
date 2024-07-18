@@ -18,7 +18,15 @@
 </script>
 
 <template>
-    <swiper :slides-per-view="2" space-between="20" loop="true">
+    <swiper :slides-per-view="2" space-between="20" loop="true" :breakpoints="{
+      0: {
+        slidesPerView: 1,
+        spaceBetween: 10,
+      },
+      1030: {
+        slidesPerView: 2,
+        spaceBetween: 20,
+      }}">
       <swiper-slide v-for="(card, i) in cardRating" :key="i">
         <div class="card">
             <span
