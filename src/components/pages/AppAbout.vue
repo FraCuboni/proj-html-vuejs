@@ -374,7 +374,7 @@ p.small {
   .container.fne{
     text-align: center;
   .box{
-    width: 100%;
+    width: 80%;
     order: 2;
   }
   .paragraph{
