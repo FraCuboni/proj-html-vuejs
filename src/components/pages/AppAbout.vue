@@ -104,7 +104,7 @@ export default{
     </div>
 
     <!-- img side -->
-    <div class="box">
+    <div class="box img">
       <img src="/public/img/AppAbout/about-dog.png" alt="">
     </div>
   </div>
@@ -215,11 +215,11 @@ p.small {
   padding-bottom: 100px;
   .box{
     width: 50%;
-
-
+    .img{
+        background-color: red;
+      }
     .about-dogmilo{
       display: flex;
-
       img{
         padding-right: 10px;
       }
@@ -248,7 +248,6 @@ p.small {
     flex-direction: column-reverse;
   }
 }
-
 .container.os{
   text-align: center;
   flex-direction: column;
@@ -268,22 +267,21 @@ p.small {
 
     .play-icon{
       width: 50px;
-      
       position: absolute;
       transform: translate(-50%, -50%);
       left: 50%;
       top: 50%;
     }
+
+    .play-icon:hover {
+      cursor: pointer;
+    }
   }
 }
-
-
 .container.fne{
   .box{
     width: 40%;
-
   }
-
   .paragraph{
     width: 60%;
 
@@ -323,6 +321,100 @@ p.small {
 
 }
 
+// tablet
+@media screen and (max-width: 1031px){
 
+  .container{
+    text-align: center;
+    width: 80%;
+    margin-top: 20px;
+    justify-content: center;
+    min-height: 30px;
+    padding-bottom: 50px;
+    flex-wrap: wrap;
+    .box{
+      .about-dogmilo{
+        justify-content: center;
+        align-items: center;
+      }
+    }
+    .box.img{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+    }
+    .column, .reverse{
+      width: calc(100% / 2);
+      padding: 10px;
+    }
+
+    .reverse{
+      flex-direction: column;
+    }
+  }
+  
+}
+
+// mobile
+@media screen and (max-width: 771px){
+  .container{
+    width: 85%;
+    .box{
+      width: 100%;
+    }
+    .column, .reverse{
+      width: 100%;
+      .col-img{
+        height: auto;
+      }
+    }
+  }
+
+  .container.fne{
+    text-align: center;
+  .box{
+    display: none;
+  }
+  .paragraph{
+    width: 100%;
+    display: block;
+
+    h3{
+      height: calc(100% / 4 - 5px);
+    }
+
+    h4{
+      color: black;
+    }
+
+    .card{
+      display: flex;
+      align-items: center;
+      height: calc(100% / 4 - 5px);
+      padding: 5px 0 5px 20px;
+
+      .img-box{
+        height: 80px;
+        background-color: #A69A79;
+        aspect-ratio: 1/1;
+        border-radius: 50%;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        img{
+          width: 70%;
+        }
+      }
+
+      .txt{
+        padding-left: 20px;
+      }
+    }
+  }
+
+}
+}
 
 </style>
