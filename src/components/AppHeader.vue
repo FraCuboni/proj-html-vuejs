@@ -6,6 +6,7 @@ export default{
     return {
       openDropdown: null,
       closeTimeout: null,
+      isHamburgerMenuOpen: false,
       menuItems: [
         {
           name: 'Home',
@@ -63,6 +64,14 @@ export default{
 
     isOpen(index) {
       return this.openDropdown === index;
+    },
+
+    toggleHamburgerMenu() {
+      this.isHamburgerMenuOpen = !this.isHamburgerMenuOpen;
+    },
+
+    closeHamburgerMenu() {
+      this.isHamburgerMenuOpen = false;
     }
   }
 
@@ -124,6 +133,19 @@ export default{
             </li>
           </ul>
         </nav>
+        <nav class="hamburger-menu" @click="toggleHamburgerMenu">
+          <i class="fa-solid fa-bars"></i>
+          <div class="cont-dropdown" :class="{active: isHamburgerMenuOpen }">
+            <ul>
+              <li v-for="(item, index) in menuItems" :key="index">
+                <router-link v-if="item.routeName" :to="{ name: item.routeName }">
+                  <span>{{ item.name }}</span>
+                </router-link>
+              </li>
+            </ul>
+          </div>
+        </nav>
+        
       </div>
     </div>
   </header>
@@ -248,5 +270,75 @@ export default{
     }
   }
 }
+
+.hamburger-menu{
+  display: none;
+
+}
+
+// Media Query Desktop
+@media screen and (max-width: 1350px) {
+  .container{
+    width: 90%;
+  }
+}
+
+// Media Query Tablet
+@media screen and (max-width: 1030px) {
+  .lower nav > ul{
+    display: none;
+  }
+
+  .hamburger-menu{
+    display: block;
+    cursor: pointer;
+    position: relative;
+
+    .cont-dropdown {
+    display: none;
+    position: absolute;
+    right: 0;
+    top: 100%;
+    background-color: #fff;
+    width: 100vw;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+    z-index: 999;
+    color: #fff;
+
+    &.active{
+      display: block;
+    }
+
+    ul{
+      list-style-type: none;
+      padding: 20px;
+
+      a{
+        text-decoration: none;
+        color: #000;
+        font-size: 30px;
+      }
+
+      li{
+        padding: 20px;
+        border-bottom: 1px solid $light_grey;
+
+        &:hover a{
+          color: $orange;
+        }
+      }
+    }
+    }
+  }
+}
+
+// Media Query Mobile
+@media screen and (max-width: 770px){
+  .upper{
+    display: none;
+  }
+}
+
+
 
 </style>
