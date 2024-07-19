@@ -83,7 +83,6 @@ export default{
         <li class="element"><p class="small">+0 123-456-7890</p></li>
         <li class="element"><p class="small"><i class="fa-solid fa-envelope"></i>info@example.com</p></li>
       </ul>
-
     </div>
     <section>
       <p class="copyright small">Copyright © 2024 dogmilo-wordpress | Powered by dogmilo-wordpress</p>
@@ -131,7 +130,7 @@ p.small {
   background-color: black;
   min-height: 30px;
   color: white;
-  padding: 50px 0;
+  padding-bottom: 20px;
   margin-top: 250px;
   position: relative;
   padding-top: 200px;
@@ -144,15 +143,13 @@ p.small {
     ul{
       width: calc(100% / 5);
       padding: 0 20px;
-    .title{
-      h4{
-        color: $orange;
 
+      .title{
+        h4{
+          color: $orange;
+        }
       }
     }
-
-    }
-
   }
 }
 
@@ -160,11 +157,11 @@ section{
   width: 80%;
   margin: 0 auto;
   text-align: center;
-  border-top: 1px solid $light_grey;
+  border-top: 1px solid gray;
   .copyright{
     margin: 0 auto;
     padding: 20px 0;
-    color: $light_grey;
+    color: gray;
   }
 }
 
@@ -210,6 +207,7 @@ section{
 
     .input-bar{
       display: flex;
+      align-items: center;
 
       input{
       width: 80%;
@@ -233,23 +231,15 @@ section{
 .socials {
   height: 100%;
   display: flex;
-  justify-content: space-between;
   align-items: center;
+  gap: 2px;
+  flex-wrap: wrap;
   color: $white;
-
-  .contacts>div {
-    margin-right: 80px;
-  }
-
-  .fa-solid {
-    margin-right: 8px;
-    color: $orange;
-  }
+  margin-top: 10px;
 
   .fa-brands {
     padding: 6px;
     border-radius: 3px;
-    margin-left: 2px;
   }
 
   .fa-facebook {
@@ -289,7 +279,72 @@ ul.icons{
         
     }
   }
-
 }
 
+@media (max-width: 1030px) {
+  .background {
+    .container {
+      flex-wrap: wrap;
+
+      ul {
+        margin-bottom: 30px;
+        width: calc(100% / 3);
+      }
+
+      .icons {
+        width: 50%;
+      }
+    }
+  }
+
+  .container.orange {
+    .input-box {
+      .input-bar {
+        input,
+        button {
+          height: 2rem;
+        }
+
+        button {
+          font-size: 1.5rem;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 770px) {
+  .background {
+    .container {
+      ul {
+        width: 50%;
+      }
+
+      .icons {
+        width: 100%;
+      }
+    }
+  }
+
+  .container.orange {
+    .cont-box {
+      .img-box {
+        display: none;
+      }
+    }
+
+    .input-box {
+      width: 100%;
+
+      h2 {
+        font-size: 30px;
+        margin-bottom: 15px;
+      }
+    }
+  }
+
+}
 </style>
