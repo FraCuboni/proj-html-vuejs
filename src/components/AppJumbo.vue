@@ -169,10 +169,7 @@ export default{
       width: 100%;
       display: flex;
       padding-top: 80px;
-
-      &.cont-jumbo>*{
-        border: 1px solid black;
-      }
+      
     }
     .text-container{
       padding: 20px;
@@ -203,7 +200,6 @@ export default{
       justify-content: center;
 
       &.cont-jumbo>*{
-        border: 1px solid black;
         width: 100%;
       }
       .text-container{
