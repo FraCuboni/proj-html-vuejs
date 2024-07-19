@@ -26,7 +26,7 @@
 
 <template>
     <swiper 
-      :autoplay="{delay : 3000, disableOnInteraction : false, pauseOnMouseEnter: true}" 
+      :autoplay="{delay : 1500, disableOnInteraction : false, pauseOnMouseEnter: true}" 
       :modules="modules" 
       :slides-per-view="2" space-between="20" loop="true" 
       :breakpoints="{
