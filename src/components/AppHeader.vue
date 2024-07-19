@@ -317,6 +317,8 @@ export default{
         text-decoration: none;
         color: #000;
         font-size: 30px;
+        width: 100%;
+        display: block;
       }
 
       li{
