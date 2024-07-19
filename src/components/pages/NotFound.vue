@@ -9,11 +9,14 @@ export default{
 <template>
     <div class="container">
         <div class="flex-cont">
-            <div class="number">Error 4</div>
-            <div class="cont-img">
-                <img src="/public/img/dog-icon.png" alt="dog-paw">
+            <div class="number">Error</div> 
+            <div class="flex-cont">
+                <div class="number">4</div>
+                <div class="cont-img">
+                    <img src="/public/img/dog-icon.png" alt="dog-paw">
+                </div>
+                <div class="number">4</div>
             </div>
-            <div class="number">4</div>
         </div>
         <div class="flex-cont home">
             <p>
@@ -35,6 +38,7 @@ export default{
         display: flex;
         justify-content: center;
         align-items: center;
+        flex-wrap: wrap;
         gap: 10px;
 
         .number {
