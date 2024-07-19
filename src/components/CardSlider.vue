@@ -1,12 +1,19 @@
 <script>
   import { Swiper, SwiperSlide } from 'swiper/vue';
   import 'swiper/swiper-bundle.css';
+  import 'swiper/css';
+  import { Autoplay } from 'swiper/modules';
   
   export default {
     name: 'CardSlider',
     components: {
       Swiper,
       SwiperSlide,
+    },
+    setup(){
+      return{
+        modules : [Autoplay]
+      }
     },
     props: {
       cardRating: {
@@ -18,7 +25,7 @@
 </script>
 
 <template>
-    <swiper :slides-per-view="2" space-between="20" loop="true" :breakpoints="{
+    <swiper :autoplay="{delay : 3000, disableOnInteraction : true,}" :modules="modules" :slides-per-view="2" space-between="20" loop="true" :breakpoints="{
       0: {
         slidesPerView: 1,
         spaceBetween: 10,
