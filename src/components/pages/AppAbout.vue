@@ -150,7 +150,7 @@ export default{
     <div class="container fne">
 
       <!-- img -->
-      <div class="box">
+      <div class="box img-box">
         <img src="/public/img/AppAbout/food.png" alt="">
       </div>
 
@@ -394,49 +394,53 @@ p.small {
 
   .container.fne{
     text-align: center;
-  .box{
-    display: none;
-  }
-  .paragraph{
-    width: 100%;
-    order: 1;
-    display: none;
+    .box{
+      width: 100%;
 
-    h3{
-      height: calc(100% / 4 - 5px);
-    }
+      &.box>img{
+        display: none;
+      }
 
-    h4{
-      color: black;
-    }
+      .box.paragraph{
+      width: 100%;
+      order: 1;
+      display: none;
 
-    .card{
-      display: flex;
-      align-items: center;
-      height: calc(100% / 4 - 5px);
-      padding: 5px 0 5px 20px;
+        h3{
+          height: calc(100% / 4 - 5px);
+        }
 
-      .img-box{
-        height: 80px;
-        background-color: #A69A79;
-        aspect-ratio: 1/1;
-        border-radius: 50%;
+        h4{
+          color: black;
+        }
 
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        img{
-          width: 70%;
+        .card{
+          display: flex;
+          align-items: center;
+          height: calc(100% / 4 - 5px);
+          padding: 5px 0 5px 20px;
+
+          .img-box{
+            height: 80px;
+            background-color: #A69A79;
+            aspect-ratio: 1/1;
+            border-radius: 50%;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            img{
+              width: 70%;
+            }
+          }
+
+          .txt{
+            padding-left: 20px;
+          }
         }
       }
-
-      .txt{
-        padding-left: 20px;
-      }
     }
   }
-
-}
 }
 
 </style>
