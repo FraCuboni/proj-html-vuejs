@@ -137,7 +137,7 @@ export default{
         <img class="dog-logo" src="../../../public/img/AppHome/dog-left.png" alt="">
       </div>
       <!-- Container Principale -->
-      <div class="container">
+      <div class="container container-flex">
         <!-- Testo Section -->
         <div class="text">
           <h4>Service</h4>
@@ -267,6 +267,7 @@ export default{
 
   .cards-container{
     display: flex;
+    justify-content: space-between;
     gap: 20px;
 
     .card{
@@ -520,6 +521,7 @@ export default{
     .cards-container {
       display: flex;
       flex-direction: column;
+      align-items: center;
 
       .card {
         width: 90%;
