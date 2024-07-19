@@ -75,7 +75,7 @@ export default {
 
   .video-box{
     position: absolute;
-    width: 70%;
+    width: 60%;
     min-height: 360px;
     min-width: 560px;
     aspect-ratio: 16/9;
