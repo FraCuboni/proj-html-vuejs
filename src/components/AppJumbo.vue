@@ -206,19 +206,19 @@ export default{
         border: 1px solid black;
         width: 100%;
       }
-    .text-container{
+      .text-container{
       display: flex;
       flex-direction: column;
       align-items: center;
       justify-content: center;
 
-    }
+      }
 
-    .flex-container{
+      .flex-container{
         display: none;
+      }
     }
   }
-    }
 
 }
 
