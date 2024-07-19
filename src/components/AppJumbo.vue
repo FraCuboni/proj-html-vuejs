@@ -54,8 +54,10 @@ export default{
     <div :style="jumboStyle" class="jumbo">
       <div class="container">
         <div class="cont-jumbo">
-          <h2>{{ title }}</h2>
-          <h5>{{ subtitle }}</h5>
+          <div class="text-container">
+            <h2>{{ title }}</h2>
+            <h5>{{ subtitle }}</h5>
+          </div>
           <div class="flex-container">
             <div v-if="startButton" class="start-button">{{ startButton }}</div>
             <div v-if="blueButtonSm" class="blue-button-sm" @click="playButton">
@@ -84,8 +86,10 @@ export default{
 .jumbo {
   height: 550px;
   background-size: cover;
+  background-position: right center;
 
   .cont-jumbo {
+    height: 550px;
     width: 50%;
     padding-top: 120px;
     color: $white;
@@ -150,11 +154,71 @@ export default{
       .blue-button-sm:hover {
         cursor: pointer;
         background-color: $orange;
-        transition: background-color linear 0.5s;
+        transition: background-color linear 500ms;
       }
     }
     
   }
+
+}
+
+// fix jumbo buttons
+@media screen and (max-width: 1231px){
+  .jumbo{
+    .cont-jumbo{
+      width: 100%;
+      display: flex;
+      padding-top: 80px;
+
+      &.cont-jumbo>*{
+        border: 1px solid black;
+      }
+    }
+    .text-container{
+      padding: 20px;
+
+    }
+
+    .flex-container{
+      align-items: center;
+    }
+  }
+}
+
+// tablet
+@media screen and (max-width: 1031px){
+
+}
+
+// mobile
+@media screen and (max-width: 771px){
+  .jumbo{
+    .cont-jumbo{
+      width: 100%;
+      display: flex;
+      flex-wrap: wrap;
+      padding-top: 80px;
+      text-align: center;
+      align-items: center;
+      justify-content: center;
+
+      &.cont-jumbo>*{
+        border: 1px solid black;
+        width: 100%;
+      }
+    .text-container{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+
+    }
+
+    .flex-container{
+        display: none;
+    }
+  }
+    }
 
 }
 
