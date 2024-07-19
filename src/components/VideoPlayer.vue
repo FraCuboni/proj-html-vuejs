@@ -62,54 +62,56 @@ export default {
 @use '../styles/partials/variables' as *;
 
 .background{
-    height: 100vh;
-    width: 100vw;
-    top: 0;
-    background-color: rgba(0, 0, 0, 0.9);
-    position: fixed;
-    z-index: 1;
+  height: 100vh;
+  width: 100vw;
+  top: 0;
+  background-color: rgba(0, 0, 0, 0.9);
+  position: fixed;
+  z-index: 1;
 
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
-    .video-box{
-        position: absolute;
-        height: 60%;
-        aspect-ratio: 16/9;
-        background-color: white;
+  .video-box{
+    position: absolute;
+    width: 70%;
+    min-height: 360px;
+    min-width: 560px;
+    aspect-ratio: 16/9;
+    background-color: white;
 
-        .topbar{
-            height: 15%;
-            background-color: blue;
-            color: white;
-            padding: 10px;
+    .topbar{
+      height: 15%;
+      background-color: blue;
+      color: white;
+      padding: 10px;
 
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
 
-            .close{
-                aspect-ratio: 1/1;
-                height: 100%;
-                cursor: pointer;
-            }
-        }
-
-        .player{
-            height: 85%;
-            padding: 20px;
-
-            display: flex;
-            align-items: center;
-            justify-content: center;
-
-            .video{
-                height: 100%;
-                width: 100%;
-                background-color: black;
-            }
-        }
+      .close{
+        aspect-ratio: 1/1;
+        height: 100%;
+        cursor: pointer;
+      }
     }
+
+    .player{
+      height: 85%;
+      padding: 20px;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      .video{
+          height: 100%;
+          width: 100%;
+          background-color: black;
+      }
+    }
+  }
 }
 </style>
